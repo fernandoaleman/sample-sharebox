@@ -1,0 +1,13 @@
+- title "Assets"
+
+%table
+  %tr
+    %th User
+  - for asset in @assets
+    %tr
+      %td= asset.user_id
+      %td= link_to 'Show', asset
+      %td= link_to 'Edit', edit_asset_path(asset)
+      %td= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Asset", new_asset_path
