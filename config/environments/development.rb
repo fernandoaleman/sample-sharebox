@@ -22,5 +22,8 @@ Sharebox::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # Setup default url options
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
 
