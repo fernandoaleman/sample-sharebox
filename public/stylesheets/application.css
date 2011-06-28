@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-body {
-=======
 html, body {
->>>>>>> update-devise
   background-color: #4b7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
@@ -35,13 +31,6 @@ a {
   background-color: #ccffcc;
   border: solid 1px #66cc66; }
 
-<<<<<<< HEAD
-=======
-#flash_unotice {
-  background-color: #ffccff;
-  border: solid 1px #66cc66; }
-
->>>>>>> update-devise
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
