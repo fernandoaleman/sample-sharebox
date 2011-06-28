@@ -9,6 +9,8 @@ gem 'sass'
 group:development do
   gem 'rspec-rails'
   gem 'nifty-generators'
+  gem 'hpricot'
+  gem 'ruby_parser'
 end
 
 group:test do
