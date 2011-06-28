@@ -6,14 +6,14 @@ gem 'haml-rails'
 gem 'devise'
 gem 'sass'
 
-group:development do
+group :development do
   gem 'rspec-rails'
   gem 'nifty-generators'
   gem 'hpricot'
   gem 'ruby_parser'
 end
 
-group:test do
+group :test do
   gem 'rspec'
   gem 'webrat'
 end
