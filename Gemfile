@@ -5,12 +5,12 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml-rails'
 gem 'devise'
 gem 'sass'
+gem 'hpricot'
+gem 'ruby_parser'
 
 group :development do
   gem 'rspec-rails'
   gem 'nifty-generators'
-  gem 'hpricot'
-  gem 'ruby_parser'
 end
 
 group :test do
