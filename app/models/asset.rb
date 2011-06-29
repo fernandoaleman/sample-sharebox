@@ -5,8 +5,10 @@ class Asset < ActiveRecord::Base
   
   #set up "uploaded_file" field as attached_file (using Paperclip)
   has_attached_file :uploaded_file,
-                    :url => "/assets/get/:id",
-                    :path => ":Rails_root/assets/:id/:basename.:extension"
+                    :path => "assets/:id/:basename.:extension",
+                    :storage => :s3,
+                    :s3_credentials => "#{RAILS_ROOT}/config/amazon_s3.yml",
+                    :bucket => "sample-sharebox"
 
   validates_attachment_size :uploaded_file, :less_than => 10.megabytes  
   validates_attachment_presence :uploaded_file

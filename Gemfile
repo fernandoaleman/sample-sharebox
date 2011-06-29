@@ -7,8 +7,8 @@ gem 'devise'
 gem 'sass'
 gem 'hpricot'
 gem 'ruby_parser'
-gem "paperclip", "~> 2.3"
-gem "mocha"
+gem 'paperclip', '~> 2.3'
+gem 'aws-s3'
 
 group :development do
   gem 'rspec-rails'
@@ -18,5 +18,5 @@ end
 group :test do
   gem 'rspec'
   gem 'webrat'
+  gem 'mocha'
 end
-gem "mocha", :group => :test
