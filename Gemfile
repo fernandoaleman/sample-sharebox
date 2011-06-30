@@ -8,7 +8,7 @@ gem 'sass'
 gem 'hpricot'
 gem 'ruby_parser'
 gem 'paperclip', '~> 2.3'
-gem 'aws-s3'
+gem 'acts_as_tree'
 
 group :development do
   gem 'rspec-rails'
