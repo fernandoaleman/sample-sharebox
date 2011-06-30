@@ -135,3 +135,19 @@ a {
       #menu ul li a:active {
         background: #dff1ff;
         border: 1px solid #afddff; }
+
+.folder {
+  background: url("/images/folder.png") no-repeat scroll left center transparent;
+  padding-left: 30px; }
+
+.file {
+  background: url("/images/file.png") no-repeat scroll left center transparent;
+  padding-left: 30px; }
+
+.folder.asset_details:hover,
+.shared_folder.asset_details:hover,
+.file.asset_details:hover {
+  border: 1px solid #dfdfdf; }
+
+.folder.asset_details:hover {
+  background: url("/images/folder.png") no-repeat scroll left center #efefef; }
