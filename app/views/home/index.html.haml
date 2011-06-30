@@ -1,2 +1,17 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+- unless user_signed_in?
+  %h1 Welcome to Sharebox
+  %p File sharing web application you can't ignore.
+- else
+  #menu
+    %ul{:id => "top_menu"}
+      %li= link_to "Upload", new_asset_path
+  %table{:class => "asset_table"}
+    %tr
+      %td{:class => "asset_file_name_title"} File Name
+      %td{:class => "asset_title"} Size
+      %td{:class => "asset_title"} Modified
+    - @assets.each do |asset|
+      %tr
+        %td{:class => "asset_file_name"}= link_to asset.file_name, download_url(asset)
+        %td{:class => "asset_details"}= number_to_human_size(asset.file_size, :precision => 2)
+        %td{:class => "asset_modified"}= asset.uploaded_file_updated_at
