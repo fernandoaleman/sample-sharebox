@@ -1,3 +1,8 @@
 - title "New Folder"
+= render :partial => "breadcrumbs"
 = render 'form'
-%p= link_to "Back to List", folders_path
+%p
+  - if @folder.parent
+    = link_to "Back to '#{@folder.parent.name}' Folder", browse_path(@folder.parent)
+  - else
+    = link_to "Back to Home page", root_url

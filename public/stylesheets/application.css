@@ -151,3 +151,10 @@ a {
 
 .folder.asset_details:hover {
   background: url("/images/folder.png") no-repeat scroll left center #efefef; }
+
+.breadcrumbs {
+  margin: 10px 0;
+  font-weight: bold; }
+  .breadcrumbs a:link {
+    color: green;
+    text-decoration: none; }
