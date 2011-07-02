@@ -2,9 +2,9 @@
   - if @current_folder # checking if we are under any folder
     = link_to "Sharebox", root_url
     - @current_folder.ancestors.reverse.each do |folder|
-      >> 
+      &raquo;&nbsp;
       = link_to folder.name, browse_path(folder)
-    >> 
+    &raquo;&nbsp;
     = @current_folder.name
   - else
     Sharebox
