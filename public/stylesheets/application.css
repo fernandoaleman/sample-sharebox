@@ -103,7 +103,7 @@ a {
     color: #1d96ef; }
 
 .asset_file_name {
-  width: 500px;
+  width: 300px;
   text-align: left; }
 
 .asset_modified {
@@ -158,3 +158,32 @@ a {
   #breadcrumbs a:link {
     color: green;
     text-decoration: none; }
+
+.asset_action {
+  float: right;
+  font-size: 11px; }
+  .asset_action .share,
+  .asset_action .rename,
+  .asset_action .download,
+  .asset_action .delete {
+    float: right;
+    font-size: 11px; }
+  .asset_action .share a,
+  .asset_action .rename a,
+  .asset_action .download a,
+  .asset_action .delete a {
+    border: 1px solid #cfe9ff;
+    font-size: 11px;
+    margin-left: 5px;
+    padding: 0 2px; }
+  .asset_action .share a:hover,
+  .asset_action .rename a:hover,
+  .asset_action .download a:hover,
+  .asset_action .delete a:hover {
+    border: 1px solid #8fcdff; }
+  .asset_action .delete a {
+    color: #bf0b12;
+    border: 1px solid FFCFD1; }
+  .asset_action .delete a:hover {
+    color: #bf0b12;
+    border: 1px solid #ff8f93; }

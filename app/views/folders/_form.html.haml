@@ -5,4 +5,8 @@
     %br/
     = f.text_field :name
   = f.hidden_field :parent_id
-  %p= f.submit "Create Folder"
+  %p
+    - if @folder.new_record?
+      = f.submit "Create Folder"
+    - else
+      = f.submit "Rename Folder"

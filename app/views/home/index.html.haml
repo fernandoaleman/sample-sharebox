@@ -16,13 +16,21 @@
       %td{:class => "asset_file_name_title"} File Name
       %td{:class => "asset_title"} Size
       %td{:class => "asset_title"} Modified
+      %td{:class => "asset_title"} Actions
     - @folders.each do |folder|
       %tr
         %td{:class => "asset_file_name folder"}= link_to folder.name, browse_path(folder)
         %td{:class => "asset_details"} -
         %td{:class => "asset_modified"} -
+        %td{:class => "asset_action"}
+          .share= link_to "Share"
+          .rename= link_to "Rename", rename_folder_path(folder)
+          .delete= link_to "Delete", folder, :confirm => 'Are you sure you want to delete the folder and all of its contents?', :method => :delete
     - @assets.each do |asset|
       %tr
         %td{:class => "asset_file_name file"}= link_to asset.file_name, download_url(asset)
         %td{:class => "asset_details"}= number_to_human_size(asset.file_size, :precision => 2)
         %td{:class => "asset_modified"}= asset.uploaded_file_updated_at
+        %td{:class => "asset_action"}
+          .download= link_to "Download", download_url(asset)
+          .delete= link_to "Delete", asset, :confirm => 'Are you sure?', :method => :delete
