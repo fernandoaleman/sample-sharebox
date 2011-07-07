@@ -82,36 +82,47 @@ a
 #login_user_status
   float: right
 
-.asset_table
-  width: 100%
-
-.asset_file_name_title,
-.asset_title
+.asset_list_header,
+.asset_list,
+.asset_details
+  width: 800px
   font:
     weight: bold
+    size: 12px
+    overflow: hidden
 
-.asset_title
-  text-align: center
+.file_name_header,
+.file_name
+  width: 350px
+  float: left
+  padding-left: 20px
 
-.asset_file_name,
-.asset_modified,
+.file_size_header,
+.file_size
+  width: 100px
+  float: left
+
+.file_last_updated_header,
+.file_last_updated
+  width: 150px
+  float: left
+
+.asset_list
+  padding: 20px 0
+
 .asset_details
   font-weight: normal
+  height: 25px
   line-height: 25px
+  border: 1px solid #FFF
+  width: 790px
   color: #4F4F4F
-  text-align: center
   
-  a:link,
+  a,
   a:visited
     text-decoration: none
     color: #1D96EF
-
-.asset_file_name
-  width: 300px
-  text-align: left
-
-.asset_modified
-  width: 200px
+    font-size: 12px
 
 #menu
   width: 800px
@@ -129,7 +140,7 @@ a
       display: block
       margin-right: 10px
       
-      a:link,
+      a,
       a:visited
         display: block
         padding: 0 15px
@@ -146,11 +157,9 @@ a
 
 .folder
   background: url("/images/folder.png") no-repeat scroll left center transparent
-  padding-left: 30px
 
 .file
   background: url("/images/file.png") no-repeat scroll left center transparent
-  padding-left: 30px
 
 .folder.asset_details:hover,
 .shared_folder.asset_details:hover,
@@ -159,50 +168,89 @@ a
 
 .folder.asset_details:hover
   background: url("/images/folder.png") no-repeat scroll left center #EFEFEF
-  
-#breadcrumbs
+
+.shared_folder
+  background: url("/images/shared_folder.png") no-repeat scroll left center transparent
+
+.shared_folder.asset_details:hover
+  background: url("/images/shared_folder.png") no-repeat scroll left center #EFEFEF
+
+.file.asset_details:hover
+  background: url("/images/file.png") no-repeat scroll left center #EFEFEF
+
+.breadcrumbs
   margin: 10px 0
   font:
     weight: bold
 
-  a:link
+  a
     color: green
     text-decoration: none
 
-.asset_action
+.actions
   float: right
-  font:
-    size: 11px
-  
-  .share,
-  .rename,
-  .download,
-  .delete
-    float: right
-    font:
-      size: 11px
+  font-size: 11px
 
-  .share a,
-  .rename a,
-  .download a,
-  .delete a,
-    border: 1px solid #CFE9FF
+.share,
+.rename,
+.download,
+.delete
+  float: left
+
+.asset_details .share a,
+.asset_details .rename a,
+.asset_details .download a,
+.asset_details .delete a,
+  border: 1px solid #CFE9FF
+  font-size: 11px
+  margin-left: 5px
+  padding: 0 2px
+  
+.asset_details .share a:hover,
+.asset_details .rename a:hover,
+.asset_details .download a:hover,
+.asset_details .delete a:hover,
+  border: 1px solid #8FCDFF
+  
+.asset_details .delete a
+  color: #BF0B12
+  border: 1px solid FFCFD1
+  
+.asset_details .delete a:hover
+  color: #BF0B12
+  border: 1px solid #FF8F93
+
+.ui-button-text-only,
+.ui-button-text
+  font-size: 14px
+  padding: 3px 10px !important
+
+.share
+  .ui-button-text-only,
+  .ui-button-text
+    padding: 0 2px !important
     font:
       size: 11px
-    margin-left: 5px
-    padding: 0 2px
+      weight: normal
+
+#invitation_form
+  font:
+    size: 14px
   
-  .share a:hover,
-  .rename a:hover,
-  .download a:hover,
-  .delete a:hover,
-    border: 1px solid #8FCDFF
+  label
+    font:
+      weight: bold
   
-  .delete a
-    color: #BF0B12
-    border: 1px solid FFCFD1
+  input.text
+    width: 480px
+    height: 20px
+    font:
+      size: 12px
+    color: #7F7F7F
   
-  .delete a:hover
-    color: #BF0B12
-    border: 1px solid #FF8F93
-  
+  textarea
+    width: 480px
+    height: 100px
+    font:
+      size: 12px
+    color: #7F7F7F

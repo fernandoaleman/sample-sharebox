@@ -9,6 +9,7 @@ gem 'hpricot'
 gem 'ruby_parser'
 gem 'paperclip', '~> 2.3'
 gem 'acts_as_tree'
+gem 'jquery-rails', '>= 1.0.3'
 
 group :development do
   gem 'rspec-rails'

@@ -5,8 +5,10 @@
     %title
       = "Sharebox | " + (content_for?(:title) ? yield(:title) : "File-sharing web app").to_s
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag "application"
-    = javascript_include_tag :defaults
+    = stylesheet_link_tag "application", "redmond/jquery-ui-1.8.14.custom"
+    = javascript_include_tag "jquery-1.5.1.min", "jquery-ui-1.8.14.custom.min"
+    = javascript_include_tag "application"
+    = javascript_include_tag "jquery.Rails"
     = csrf_meta_tag
     = yield(:head)
 
