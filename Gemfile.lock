@@ -40,6 +40,7 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    fastercsv (1.5.4)
     haml (3.1.2)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -124,6 +125,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_tree
   devise
+  fastercsv
   haml-rails
   hpricot
   jquery-rails (>= 1.0.3)
