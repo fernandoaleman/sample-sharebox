@@ -33,14 +33,13 @@ GEM
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     cocaine (0.1.0)
-    devise (1.4.0)
+    devise (1.4.2)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    fastercsv (1.5.4)
     haml (3.1.2)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -124,8 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_tree
-  devise
-  fastercsv
+  devise (= 1.4.2)
   haml-rails
   hpricot
   jquery-rails (>= 1.0.3)
