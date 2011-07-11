@@ -16,8 +16,15 @@
     %div{:class => "file_size_header"}Size
     %div{:class => "file_last_updated_header"}Modified
   %div{:class => "asset_list"}
-    - @folders.each do |folder|
+    - @being_shared_folders.each do |folder|
       - folder_type = folder.shared? ? 'shared_folder' : 'folder'
+      %div{:class => "asset_details #{folder_type}", :id => "folder_#{folder.id}"}
+        %div{:class => "file_name"}= link_to folder.name, browse_path(folder)
+        %div{:class => "file_size"} -
+        %div{:class => "file_last_updated"} -
+        %div{:class => "actions"}
+    - @folders.each do |folder|
+    - folder_type = folder.shared? ? 'shared_folder' : 'folder'
       %div{:class => "asset_details folder #{folder_type}"}
         %div{:class => "file_name"}= link_to folder.name, browse_path(folder)
         %div{:class => "file_size"} -
@@ -35,7 +42,7 @@
           .download= link_to "Download", download_url(asset)
           .delete= link_to "Delete", asset, :confirm => 'Are you sure?', :method => :delete
   #invitation_form{:title => "Invite others to share", :style => "display:none"}
-    - form_tag '/home/share' do
+    = form_tag '/home/share' do
       %label{:for => "email_addresses"} Enter recipient email addresses here
       %br/
       = text_field_tag 'email_addresses', "", :class => 'text ui-widget-content ui-corner-all'

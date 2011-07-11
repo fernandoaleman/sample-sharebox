@@ -5,9 +5,7 @@ $("#invitation_form").dialog("close");
 $("#flash_notice").remove();
 
 //showing a flash message
-$("#container").prepend("
-Successfully shared the folder
-");
+$("#container").prepend("<div id='flash_notice'>Successfully shared the folder</div>");
 
 // Removing the css class 'folder'
 $("#folder_<%= params[:folder_id] %>").removeClass("folder");
