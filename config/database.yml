@@ -16,7 +16,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: pg
+  adapter: postgresql
   database: sharebox
   host: localhost
   username: sharebox
