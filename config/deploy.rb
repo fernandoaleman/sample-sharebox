@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "sharebox"
 set :repository,  "git://github.com/fernandoaleman/sample-sharebox.git"
 

@@ -7,4 +7,4 @@ doc/
 *.swp
 *~
 .project
-.DS_Store
+.DS_Store.bundle\n
