@@ -12,6 +12,13 @@ role :app, "192.168.180.129"                          # This may be the same as 
 role :db,  "192.168.180.129", :primary => true # This is where Rails migrations will run
 role :db,  "192.168.180.129"
 
+set :bundle_gemfile,  "Gemfile"
+set :bundle_dir,      File.join(fetch(:shared_path), 'bundle')
+set :bundle_flags,    "--deployment --quiet"
+set :bundle_without,  [:development, :test]
+set :bundle_cmd,      "bundle"
+#set :bundle_roles,    {:except => {:no_release => true}} # e.g. [:app, :batch]
+
 require "bundler/capistrano"
 
 # if you're still using the script/reaper helper you will need
